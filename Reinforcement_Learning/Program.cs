@@ -5,20 +5,20 @@ namespace Reinforcement_Learning
     class Program
     {
         public static DynamicProgrammingManager DPManager;
+        public static GameManager gameManager;
 
         static void Main(string[] args)
         {
             DPManager = new DynamicProgrammingManager();
+            gameManager = new GameManager();
 
             bool showMenu = true; // true:메뉴창 false:게임창
 
-            while(showMenu)
+            while (showMenu)
             {
                 showMenu = MainMenu();
-
-
             }
-            
+
         }
 
         private static bool MainMenu()
@@ -33,12 +33,13 @@ namespace Reinforcement_Learning
             Console.WriteLine(Environment.NewLine);
             Console.Write("동작 선택 : ");
 
-            switch(Console.ReadLine())
+            switch (Console.ReadLine())
             {
                 case "1":
                     DPManager.UpdateByDynamicProgramming();
                     return true;
                 case "2":
+                    gameManager.PlayGame();
                     return true;
                 case "3":
                     return false;
@@ -47,5 +48,6 @@ namespace Reinforcement_Learning
             }
 
         }
+
     }
 }
