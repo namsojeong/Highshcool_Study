@@ -22,6 +22,12 @@
   1. 가치함수 초기화
   
   2. 동적프로그래밍 적용(가치이터레이션)
+  
+### 3일차
+- SARSA
+
+
+- Q_Learning
 
 
 ## [자세한 내용 요약 정리](https://namsojeong.notion.site/1-fd7a6c76f06844abaaffdbebf5df6a0e)
